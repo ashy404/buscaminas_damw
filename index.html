@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscaminas del jardín</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Buscaminas</h1>
+  <p class="subtitle">del jardín</p>
+
+  <div class="stats">
+    <div class="pill">
+      <svg class="icon" viewBox="0 0 18 18" aria-hidden="true">
+        <circle cx="9" cy="9" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <line x1="9" y1="9" x2="9" y2="4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <line x1="9" y1="9" x2="12" y2="10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span id="timer">00:00</span>
+    </div>
+
+    <div class="pill">
+      <img id="mineIcon" class="icon" alt="minas restantes">
+      <span id="mineCount">0</span>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="diff" data-diff="facil">Fácil 9×9</button>
+    <button class="diff active" data-diff="normal">Normal 16×16</button>
+    <button class="diff" data-diff="dificil">Difícil 16×30</button>
+    <button class="restart" id="restartBtn">Reiniciar</button>
+  </div>
+
+  <div class="frame">
+    <div class="board" id="board"></div>
+  </div>
+
+  <footer>Clic izquierdo: descubrir · Clic derecho: marcar con el gusano</footer>
+
+  <div class="status-overlay" id="overlay">
+    <div class="status-card">
+      <h2 id="statusTitle">¡Perdiste!</h2>
+      <p id="statusMsg">Un gusano estaba escondido bajo el césped.</p>
+      <button id="overlayRestart">Jugar de nuevo</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
